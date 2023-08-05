@@ -47,7 +47,7 @@ const Home: NextPage = () => {
           <div className="md:w-1/2">
             <div className="mx-20">
               <p className="text-2xl text-center md:text-start font-bold text-blue-800">Sposor</p>
-              <div className="flex flex-row">
+              <div className="flex flex-row justify-center md:justify-normal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-20 w-20 p-4"
@@ -73,7 +73,7 @@ const Home: NextPage = () => {
                   <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                 </svg>
               </div>
-              <div className="flex flex-row">
+              <div className="flex flex-row justify-center md:justify-normal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-20 w-20 p-4"
