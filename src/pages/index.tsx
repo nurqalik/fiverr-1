@@ -1,5 +1,6 @@
 import { type NextPage } from "next";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 const Home: NextPage = () => {
   return (
@@ -102,7 +103,81 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        <div className="container mx-auto my-10">
+        <div className="flex flex-row justify-center">
+          <button className="mx-8"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/> </svg></button>
+          <ul className="flex flex-row">
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Time Management</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Energy</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Goal Setting</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Genomics</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Focus</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Efficiency</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Technology</li>
+          </ul>
+          <button><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/> </svg></button>
+        </div>
+        </div>
+        <div>
+        <div className="flex flex-col items-center">
+          <div className="flex flex-row mb-2 mx-60">
+            <img src="car6.jpg" alt="" className="w-96 h-60 mx-6" />
+            <div className="mx-6">
+              <div className="flex flex-row items-center">
+              <h1 className="text-slate-500 px-2">Topic Name</h1>
+              <button className="rounded-full bg-blue-400 w-2 h-2" disabled></button>
+              <h1 className="text-slate-500 px-2">1 jun 2023</h1>
+              </div>
+            <h1 className="px-2 font-bold text-2xl">Lorem Ipsum dolor sit amet consectetur. Porta velit</h1>
+            </div>
+          </div>
+          <hr className="bg-slate-400 border w-2/3 h-1 mb-2"/>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="flex flex-row mb-2 mx-60">
+            <img src="car6.jpg" alt="" className="w-96 h-60 mx-6" />
+            <div className="mx-6">
+              <div className="flex flex-row items-center">
+              <h1 className="text-slate-500 px-2">Topic Name</h1>
+              <button className="rounded-full bg-blue-400 w-2 h-2" disabled></button>
+              <h1 className="text-slate-500 px-2">1 jun 2023</h1>
+              </div>
+            <h1 className="px-2 font-bold text-2xl">Lorem Ipsum dolor sit amet consectetur. Porta velit</h1>
+            </div>
+          </div>
+          <hr className="bg-slate-400 border w-2/3 h-1 mb-2"/>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="flex flex-row mb-2 mx-60">
+            <img src="car6.jpg" alt="" className="w-96 h-60 mx-6" />
+            <div className="mx-6">
+              <div className="flex flex-row items-center">
+              <h1 className="text-slate-500 px-2">Topic Name</h1>
+              <button className="rounded-full bg-blue-400 w-2 h-2" disabled></button>
+              <h1 className="text-slate-500 px-2">1 jun 2023</h1>
+              </div>
+            <h1 className="px-2 font-bold text-2xl">Lorem Ipsum dolor sit amet consectetur. Porta velit</h1>
+            </div>
+          </div>
+          <hr className="bg-slate-400 border w-2/3 h-1 mb-2"/>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="flex flex-row mb-2 mx-60">
+            <img src="car6.jpg" alt="" className="w-96 h-60 mx-6" />
+            <div className="mx-6">
+              <div className="flex flex-row items-center">
+              <h1 className="text-slate-500 px-2">Topic Name</h1>
+              <button className="rounded-full bg-blue-400 w-2 h-2" disabled></button>
+              <h1 className="text-slate-500 px-2">1 jun 2023</h1>
+              </div>
+            <h1 className="px-2 font-bold text-2xl">Lorem Ipsum dolor sit amet consectetur. Porta velit</h1>
+            </div>
+          </div>
+          <hr className="bg-slate-400 border w-2/3 h-1 mb-2"/>
+        </div>
+        </div>
       </div>
+      <Footer/>
     </>
   );
 };
