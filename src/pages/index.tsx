@@ -8,13 +8,16 @@ const Home: NextPage = () => {
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
-    restDelta: 0.001
+    restDelta: 0.001,
   });
 
   return (
     <>
-    <motion.div className="fixed top-0 left-0 right-0 h-[3px] bg-blue-500 origin-[0%]" style={{ scaleX }} />
-      
+      <motion.div
+        className="fixed left-0 right-0 top-0 h-[3px] origin-[0%] bg-blue-500"
+        style={{ scaleX }}
+      />
+
       <div className="container mx-auto mt-5 md:mt-40">
         <div className="my-10 md:my-40">
           <div className="flex flex-row justify-center">
@@ -34,10 +37,10 @@ const Home: NextPage = () => {
             Lorem ipsum dolor sit amet consectetur. Faucibus elit placerat a sed
             facilisi sed facilisi
           </p>
-          <div className="flex flex-col md:flex-row justify-center items-center">
+          <div className="flex flex-col items-center justify-center md:flex-row">
             <input
               type="text"
-              className="my-4 md:mr-4 w-64 md:w-80 rounded-full border border-blue-700 p-2 pl-8"
+              className="my-4 w-64 rounded-full border border-blue-700 p-2 pl-8 md:mr-4 md:w-80"
               placeholder="Lorem ipsum dolor sit amet"
             />
             <button className="w-36 rounded-full bg-blue-700 text-white">
@@ -45,10 +48,10 @@ const Home: NextPage = () => {
             </button>
           </div>
         </div>
-        <div className="mx-auto md:my-40 flex flex-col md:flex-row">
+        <div className="mx-auto flex flex-col md:my-40 md:flex-row">
           <div className="md:w-1/2">
             <div className="mx-4 md:mx-20">
-              <h1 className="mx-10 text-center md:text-start mb-4 md:mb-0 md:mx-0 md:ml-20 md:mt-9 text-2xl md:text-4xl font-bold">
+              <h1 className="mx-10 mb-4 text-center text-2xl font-bold md:mx-0 md:mb-0 md:ml-20 md:mt-9 md:text-start md:text-4xl">
                 Lorem ipsum dolor sit amet consectetur. <br />
                 Consequat porta.
               </h1>
@@ -56,7 +59,9 @@ const Home: NextPage = () => {
           </div>
           <div className="md:w-1/2">
             <div className="mx-20">
-              <p className="text-2xl text-center md:text-start font-bold text-blue-800">Sposor</p>
+              <p className="text-center text-2xl font-bold text-blue-800 md:text-start">
+                Sposor
+              </p>
               <div className="flex flex-row justify-center md:justify-normal">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -113,81 +118,146 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="container mx-auto my-10">
-          <p className="text-2xl text-center font-bold py-4 visible md:invisible">Category</p>
-        <div className="flex flex-row justify-center">
-          <button className="mx-8 invisible md:visible"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/> </svg></button>
-          <ul className="flex flex-col md:flex-row">
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Time Management</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Energy</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Goal Setting</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Genomics</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Focus</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Efficiency</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Technology</li>
-          </ul>
-          <button className="mx-8 invisible md:visible"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/> </svg></button>
-        </div>
-        </div>
-        <div>
-        <div className="flex flex-col items-center">
-          <div className="flex flex-row mb-2 mx-60">
-            <img src="car6.jpg" alt="" className="w-96 h-60 mx-6" />
-            <div className="mx-6">
-              <div className="flex flex-row items-center">
-              <h1 className="text-slate-500 px-2">Topic Name</h1>
-              <button className="rounded-full bg-blue-400 w-2 h-2" disabled></button>
-              <h1 className="text-slate-500 px-2">1 jun 2023</h1>
-              </div>
-            <h1 className="px-2 font-bold text-2xl">Lorem Ipsum dolor sit amet consectetur. Porta velit</h1>
-            </div>
+          <p className="visible py-4 text-center text-2xl font-bold md:invisible">
+            Category
+          </p>
+          <div className="flex flex-row justify-center">
+            <button className="invisible mx-8 md:visible">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                className="bi bi-arrow-left"
+                viewBox="0 0 16 16"
+              >
+                {" "}
+                <path
+                  fill-rule="evenodd"
+                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+                />{" "}
+              </svg>
+            </button>
+            <ul className="flex flex-col md:flex-row">
+              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+                Time Management
+              </li>
+              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+                Energy
+              </li>
+              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+                Goal Setting
+              </li>
+              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+                Genomics
+              </li>
+              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+                Focus
+              </li>
+              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+                Efficiency
+              </li>
+              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+                Technology
+              </li>
+            </ul>
+            <button className="invisible mx-8 md:visible">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                className="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                {" "}
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                />{" "}
+              </svg>
+            </button>
           </div>
-          <hr className="bg-slate-400 border w-2/3 h-1 mb-2"/>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="flex flex-row mb-2 mx-60">
-            <img src="car6.jpg" alt="" className="w-96 h-60 mx-6" />
-            <div className="mx-6">
-              <div className="flex flex-row items-center">
-              <h1 className="text-slate-500 px-2">Topic Name</h1>
-              <button className="rounded-full bg-blue-400 w-2 h-2" disabled></button>
-              <h1 className="text-slate-500 px-2">1 jun 2023</h1>
+        <div className="container mx-auto my-10 w-full">
+          <div className="flex flex-col md:items-center mx-0 md:mx-6">
+            <div className="mb-2 flex flex-col md:mx-60 md:flex-row items-center md:items-start justify-center md:justify-start mx-16">
+              <img src="car6.jpg" alt="" className="md:mx-6 h-40 w-72 md:h-60 md:w-96 rounded-xl md:rounded-none md:my-0 my-4"/>
+              <div className="mx-6 md:mx-0">
+                <div className="flex flex-row items-center md:justify-normal md:pl-4 justify-center">
+                  <h1 className="px-2 text-slate-500">Topic Name</h1>
+                  <button
+                    className="h-2 w-2 rounded-full bg-blue-400"
+                    disabled
+                  ></button>
+                  <h1 className="px-2 text-slate-500">1 jun 2023</h1>
+                </div>
+                <h1 className="px-2 text-2xl font-bold mx-4 md:mx-0 md:text-left text-center">
+                  Lorem Ipsum dolor sit amet consectetur. Porta velit
+                </h1>
               </div>
-            <h1 className="px-2 font-bold text-2xl">Lorem Ipsum dolor sit amet consectetur. Porta velit</h1>
             </div>
+            <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
           </div>
-          <hr className="bg-slate-400 border w-2/3 h-1 mb-2"/>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="flex flex-row mb-2 mx-60">
-            <img src="car6.jpg" alt="" className="w-96 h-60 mx-6" />
-            <div className="mx-6">
-              <div className="flex flex-row items-center">
-              <h1 className="text-slate-500 px-2">Topic Name</h1>
-              <button className="rounded-full bg-blue-400 w-2 h-2" disabled></button>
-              <h1 className="text-slate-500 px-2">1 jun 2023</h1>
+          <div className="flex flex-col md:items-center mx-0 md:mx-6">
+            <div className="mb-2 flex flex-col md:mx-60 md:flex-row items-center md:items-start justify-center md:justify-start mx-16">
+              <img src="car6.jpg" alt="" className="md:mx-6 h-40 w-72 md:h-60 md:w-96 rounded-xl md:rounded-none md:my-0 my-4"/>
+              <div className="mx-6 md:mx-0">
+                <div className="flex flex-row items-center md:justify-normal md:pl-4 justify-center">
+                  <h1 className="px-2 text-slate-500">Topic Name</h1>
+                  <button
+                    className="h-2 w-2 rounded-full bg-blue-400"
+                    disabled
+                  ></button>
+                  <h1 className="px-2 text-slate-500">1 jun 2023</h1>
+                </div>
+                <h1 className="px-2 text-2xl font-bold mx-4 md:mx-0 md:text-left text-center">
+                  Lorem Ipsum dolor sit amet consectetur. Porta velit
+                </h1>
               </div>
-            <h1 className="px-2 font-bold text-2xl">Lorem Ipsum dolor sit amet consectetur. Porta velit</h1>
             </div>
+            <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
           </div>
-          <hr className="bg-slate-400 border w-2/3 h-1 mb-2"/>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="flex flex-row mb-2 mx-60">
-            <img src="car6.jpg" alt="" className="w-96 h-60 mx-6" />
-            <div className="mx-6">
-              <div className="flex flex-row items-center">
-              <h1 className="text-slate-500 px-2">Topic Name</h1>
-              <button className="rounded-full bg-blue-400 w-2 h-2" disabled></button>
-              <h1 className="text-slate-500 px-2">1 jun 2023</h1>
+          <div className="flex flex-col md:items-center mx-0 md:mx-6">
+            <div className="mb-2 flex flex-col md:mx-60 md:flex-row items-center md:items-start justify-center md:justify-start mx-16">
+              <img src="car6.jpg" alt="" className="md:mx-6 h-40 w-72 md:h-60 md:w-96 rounded-xl md:rounded-none md:my-0 my-4"/>
+              <div className="mx-6 md:mx-0">
+                <div className="flex flex-row items-center md:justify-normal md:pl-4 justify-center">
+                  <h1 className="px-2 text-slate-500">Topic Name</h1>
+                  <button
+                    className="h-2 w-2 rounded-full bg-blue-400"
+                    disabled
+                  ></button>
+                  <h1 className="px-2 text-slate-500">1 jun 2023</h1>
+                </div>
+                <h1 className="px-2 text-2xl font-bold mx-4 md:mx-0 md:text-left text-center">
+                  Lorem Ipsum dolor sit amet consectetur. Porta velit
+                </h1>
               </div>
-            <h1 className="px-2 font-bold text-2xl">Lorem Ipsum dolor sit amet consectetur. Porta velit</h1>
             </div>
+            <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
           </div>
-          <hr className="bg-slate-400 border w-2/3 h-1 mb-2"/>
-        </div>
+          <div className="flex flex-col md:items-center mx-0 md:mx-6">
+            <div className="mb-2 flex flex-col md:mx-60 md:flex-row items-center md:items-start justify-center md:justify-start mx-16">
+              <img src="car6.jpg" alt="" className="md:mx-6 h-40 w-72 md:h-60 md:w-96 rounded-xl md:rounded-none md:my-0 my-4"/>
+              <div className="mx-6 md:mx-0">
+                <div className="flex flex-row items-center md:justify-normal md:pl-4 justify-center">
+                  <h1 className="px-2 text-slate-500">Topic Name</h1>
+                  <button
+                    className="h-2 w-2 rounded-full bg-blue-400"
+                    disabled
+                  ></button>
+                  <h1 className="px-2 text-slate-500">1 jun 2023</h1>
+                </div>
+                <h1 className="px-2 text-2xl font-bold mx-4 md:mx-0 md:text-left text-center">
+                  Lorem Ipsum dolor sit amet consectetur. Porta velit
+                </h1>
+              </div>
+            </div>
+            <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
+          </div>
         </div>
       </div>
-      
     </>
   );
 };

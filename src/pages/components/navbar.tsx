@@ -63,7 +63,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.97 }}
               type="button"
               tabIndex={0}
-              className="dropdown dropdown-end sticky top-0 h-10 w-10 rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 md:hidden"
+              className="dropdown dropdown-end sticky top-0 h-10 w-10 rounded-lg p-2 text-sm md:hidden"
               onClick={() => setIsOpen(!isOpen)}
             >
               <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
