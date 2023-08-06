@@ -8,7 +8,7 @@ const Home: NextPage = () => {
         <div className="my-10 md:my-40">
           <motion.div
             className="flex flex-row justify-center"
-            transition={{delay:0.5}}
+            transition={{ delay: 0.5 }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -21,29 +21,32 @@ const Home: NextPage = () => {
               Ipsum
             </h1>
           </motion.div>
-          <motion.h1 className="text-center text-5xl font-bold md:text-7xl" 
-            transition={{delay:0.5}}
+          <motion.h1
+            className="text-center text-5xl font-bold md:text-7xl"
+            transition={{ delay: 0.5 }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
             dolor sit amet cectur.
           </motion.h1>
-          <motion.p className="m-5 text-center text-sm"
-          transition={{delay:0.5}}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          <motion.p
+            className="m-5 text-center text-sm"
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
           >
             {" "}
             Lorem ipsum dolor sit amet consectetur. Faucibus elit placerat a sed
             facilisi sed facilisi
           </motion.p>
-          <motion.div className="flex flex-col items-center justify-center md:flex-row"
-          transition={{delay:0.5}}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          <motion.div
+            className="flex flex-col items-center justify-center md:flex-row"
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
           >
             <input
               type="text"
@@ -55,11 +58,13 @@ const Home: NextPage = () => {
             </button>
           </motion.div>
         </div>
-        <motion.div className="mx-auto flex flex-col md:my-40 md:flex-row"
-        transition={{delay:0.5}}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}>
+        <motion.div
+          className="mx-auto flex flex-col md:my-40 md:flex-row"
+          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <div className="md:w-1/2">
             <div className="mx-4 md:mx-20">
               <h1 className="mx-10 mb-4 text-center text-2xl font-bold md:mx-0 md:mb-0 md:ml-20 md:mt-9 md:text-start md:text-4xl">
@@ -128,11 +133,13 @@ const Home: NextPage = () => {
             </div>
           </div>
         </motion.div>
-        <motion.div className="container mx-auto my-10"
-        transition={{delay:0.5}}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}>
+        <motion.div
+          className="container mx-auto my-10"
+          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <p className="visible py-4 text-center text-2xl font-bold md:invisible">
             Category
           </p>
@@ -195,10 +202,12 @@ const Home: NextPage = () => {
           </div>
         </motion.div>
         <div className="container mx-auto my-10 w-full">
-          <motion.div className="mx-0 flex flex-col md:mx-6 md:items-center"
-          transition={{delay:0.5}}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}>
+          <motion.div
+            className="mx-0 flex flex-col md:mx-6 md:items-center"
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+          >
             <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
               <img
                 src="car6.jpg"
@@ -221,10 +230,12 @@ const Home: NextPage = () => {
             </div>
             <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
           </motion.div>
-          <motion.div className="mx-0 flex flex-col md:mx-6 md:items-center"
-          transition={{delay:0.5}}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}>
+          <motion.div
+            className="mx-0 flex flex-col md:mx-6 md:items-center"
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+          >
             <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
               <img
                 src="car6.jpg"
@@ -247,10 +258,12 @@ const Home: NextPage = () => {
             </div>
             <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
           </motion.div>
-          <motion.div className="mx-0 flex flex-col md:mx-6 md:items-center"
-          transition={{delay:0.5}}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}>
+          <motion.div
+            className="mx-0 flex flex-col md:mx-6 md:items-center"
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+          >
             <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
               <img
                 src="car6.jpg"
@@ -273,10 +286,12 @@ const Home: NextPage = () => {
             </div>
             <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
           </motion.div>
-          <motion.div className="mx-0 flex flex-col md:mx-6 md:items-center"
-          transition={{delay:0.5}}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}>
+          <motion.div
+            className="mx-0 flex flex-col md:mx-6 md:items-center"
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+          >
             <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
               <img
                 src="car6.jpg"
