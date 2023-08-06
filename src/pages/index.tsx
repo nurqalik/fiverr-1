@@ -1,11 +1,20 @@
 import { type NextPage } from "next";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const Home: NextPage = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   return (
     <>
-      <Navbar />
+    <motion.div className="fixed top-0 left-0 right-0 h-[3px] bg-blue-500 origin-[0%]" style={{ scaleX }} />
+      
       <div className="container mx-auto mt-5 md:mt-40">
         <div className="my-10 md:my-40">
           <div className="flex flex-row justify-center">
@@ -104,18 +113,19 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="container mx-auto my-10">
+          <p className="text-2xl text-center font-bold py-4 visible md:invisible">Category</p>
         <div className="flex flex-row justify-center">
-          <button className="mx-8"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/> </svg></button>
-          <ul className="flex flex-row">
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Time Management</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Energy</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Goal Setting</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Genomics</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Focus</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Efficiency</li>
-            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2">Technology</li>
+          <button className="mx-8 invisible md:visible"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-left" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/> </svg></button>
+          <ul className="flex flex-col md:flex-row">
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Time Management</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Energy</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Goal Setting</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Genomics</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Focus</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Efficiency</li>
+            <li className="mx-4 rounded-lg hover:bg-blue-800 hover:text-white px-4 py-2 text-center">Technology</li>
           </ul>
-          <button><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/> </svg></button>
+          <button className="mx-8 invisible md:visible"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/> </svg></button>
         </div>
         </div>
         <div>
@@ -177,7 +187,7 @@ const Home: NextPage = () => {
         </div>
         </div>
       </div>
-      <Footer/>
+      
     </>
   );
 };
