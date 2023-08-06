@@ -8,34 +8,32 @@ function useMenuAnimation(isOpen: boolean) {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
-    async () => {
-      await animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
+    animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
 
-      await animate(
-        "ul",
-        {
-          clipPath: isOpen
-            ? "inset(0% 0% 0% 0% round 10px)"
-            : "inset(10% 50% 90% 50% round 10px)",
-        },
-        {
-          type: "spring",
-          bounce: 0,
-          duration: 0.5,
-        }
-      );
+    animate(
+      "ul",
+      {
+        clipPath: isOpen
+          ? "inset(0% 0% 0% 0% round 10px)"
+          : "inset(10% 50% 90% 50% round 10px)",
+      },
+      {
+        type: "spring",
+        bounce: 0,
+        duration: 0.5,
+      }
+    );
 
-      await animate(
-        "li",
-        isOpen
-          ? { opacity: 1, scale: 1, filter: "blur(0px)" }
-          : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
-        {
-          duration: 0.2,
-          delay: isOpen ? staggerMenuItems : 0,
-        }
-      );
-    };
+    animate(
+      "li",
+      isOpen
+        ? { opacity: 1, scale: 1, filter: "blur(0px)" }
+        : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
+      {
+        duration: 0.2,
+        delay: isOpen ? staggerMenuItems : 0,
+      }
+    );
   }, [isOpen, animate]);
 
   return scope;
@@ -76,8 +74,11 @@ const Navbar = () => {
             </motion.button>
             <div tabIndex={0} className="visible relative py-2 md:invisible">
               <div
-                className="border-non absolute right-0 z-10 flex w-40 flex-col items-center rounded-lg p-2"
-                style={{ backgroundColor: isOpen ? "white" : "transparent" }}
+                className="absolute right-0 z-10 flex w-40 flex-col items-center rounded-lg border-none p-2"
+                style={{
+                  backgroundColor: isOpen ? "white" : "transparent",
+                  display: isOpen ? "" : "none",
+                }}
               >
                 <ul
                   className="flex list-none flex-col gap-[10px]"
