@@ -8,9 +8,9 @@ function useMenuAnimation(isOpen: boolean) {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
-    animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
+    void animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
 
-    animate(
+    void animate(
       "ul",
       {
         clipPath: isOpen
@@ -24,7 +24,7 @@ function useMenuAnimation(isOpen: boolean) {
       }
     );
 
-    animate(
+    void animate(
       "li",
       isOpen
         ? { opacity: 1, scale: 1, filter: "blur(0px)" }
@@ -40,7 +40,7 @@ function useMenuAnimation(isOpen: boolean) {
 }
 
 const Navbar = () => {
-  const [isOpen, setisOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const scope = useMenuAnimation(isOpen);
 
   return (
@@ -64,7 +64,7 @@ const Navbar = () => {
               type="button"
               tabIndex={0}
               className="dropdown dropdown-end sticky top-0 h-10 w-10 rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 md:hidden"
-              onClick={() => setisOpen(!isOpen)}
+              onClick={() => setIsOpen(!isOpen)}
             >
               <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
                 <svg width="15" height="15" viewBox="0 0 20 20">
