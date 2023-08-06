@@ -44,9 +44,9 @@ const Navbar = () => {
   const scope = useMenuAnimation(isOpen);
 
   return (
-    <nav className="z-0 w-full bg-white" ref={scope}>
+    <nav className="z-0 h-24 max-h-min md:h-auto md:w-full bg-white items-center" ref={scope}>
       <div className="mx-auto max-w-screen-xl items-center justify-between p-4">
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between md:items-end">
           <Link
             href={"/"}
             className="items-center p-2 pt-4 text-left font-sans text-3xl font-semibold text-blue-800 hover:text-blue-900"
@@ -58,7 +58,7 @@ const Navbar = () => {
               <p className="text-black">ite</p>
             </div>
           </Link>
-          <div className="flex w-1/2 flex-col items-end">
+          <div className="flex w-1/2 flex-col md:items-center md:justify-center items-end pt-2 md:pt-0">
             <motion.button
               whileTap={{ scale: 0.97 }}
               type="button"
@@ -72,7 +72,9 @@ const Navbar = () => {
                 </svg>
               </div>
             </motion.button>
-            <div tabIndex={0} className="visible relative py-2 md:invisible">
+            <div tabIndex={0} className="relative py-2 md:invisible" style={{
+              visibility: isOpen ? "visible" : "hidden"
+            }}>
               <div
                 className="absolute right-0 z-10 flex w-40 flex-col items-center rounded-lg border-none p-2"
                 style={{

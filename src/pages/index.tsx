@@ -1,23 +1,8 @@
 import { type NextPage } from "next";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import { motion, useScroll, useSpring } from "framer-motion";
 
 const Home: NextPage = () => {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
   return (
     <>
-      <motion.div
-        className="fixed left-0 right-0 top-0 h-[3px] origin-[0%] bg-blue-500"
-        style={{ scaleX }}
-      />
-
       <div className="container mx-auto mt-5 md:mt-40">
         <div className="my-10 md:my-40">
           <div className="flex flex-row justify-center">
@@ -180,11 +165,15 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="container mx-auto my-10 w-full">
-          <div className="flex flex-col md:items-center mx-0 md:mx-6">
-            <div className="mb-2 flex flex-col md:mx-60 md:flex-row items-center md:items-start justify-center md:justify-start mx-16">
-              <img src="car6.jpg" alt="" className="md:mx-6 h-40 w-72 md:h-60 md:w-96 rounded-xl md:rounded-none md:my-0 my-4"/>
+          <div className="mx-0 flex flex-col md:mx-6 md:items-center">
+            <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
+              <img
+                src="car6.jpg"
+                alt=""
+                className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
+              />
               <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center md:justify-normal md:pl-4 justify-center">
+                <div className="flex flex-row items-center justify-center md:justify-normal md:pl-4">
                   <h1 className="px-2 text-slate-500">Topic Name</h1>
                   <button
                     className="h-2 w-2 rounded-full bg-blue-400"
@@ -192,18 +181,22 @@ const Home: NextPage = () => {
                   ></button>
                   <h1 className="px-2 text-slate-500">1 jun 2023</h1>
                 </div>
-                <h1 className="px-2 text-2xl font-bold mx-4 md:mx-0 md:text-left text-center">
+                <h1 className="mx-4 px-2 text-center text-2xl font-bold md:mx-0 md:text-left">
                   Lorem Ipsum dolor sit amet consectetur. Porta velit
                 </h1>
               </div>
             </div>
             <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
           </div>
-          <div className="flex flex-col md:items-center mx-0 md:mx-6">
-            <div className="mb-2 flex flex-col md:mx-60 md:flex-row items-center md:items-start justify-center md:justify-start mx-16">
-              <img src="car6.jpg" alt="" className="md:mx-6 h-40 w-72 md:h-60 md:w-96 rounded-xl md:rounded-none md:my-0 my-4"/>
+          <div className="mx-0 flex flex-col md:mx-6 md:items-center">
+            <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
+              <img
+                src="car6.jpg"
+                alt=""
+                className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
+              />
               <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center md:justify-normal md:pl-4 justify-center">
+                <div className="flex flex-row items-center justify-center md:justify-normal md:pl-4">
                   <h1 className="px-2 text-slate-500">Topic Name</h1>
                   <button
                     className="h-2 w-2 rounded-full bg-blue-400"
@@ -211,18 +204,22 @@ const Home: NextPage = () => {
                   ></button>
                   <h1 className="px-2 text-slate-500">1 jun 2023</h1>
                 </div>
-                <h1 className="px-2 text-2xl font-bold mx-4 md:mx-0 md:text-left text-center">
+                <h1 className="mx-4 px-2 text-center text-2xl font-bold md:mx-0 md:text-left">
                   Lorem Ipsum dolor sit amet consectetur. Porta velit
                 </h1>
               </div>
             </div>
             <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
           </div>
-          <div className="flex flex-col md:items-center mx-0 md:mx-6">
-            <div className="mb-2 flex flex-col md:mx-60 md:flex-row items-center md:items-start justify-center md:justify-start mx-16">
-              <img src="car6.jpg" alt="" className="md:mx-6 h-40 w-72 md:h-60 md:w-96 rounded-xl md:rounded-none md:my-0 my-4"/>
+          <div className="mx-0 flex flex-col md:mx-6 md:items-center">
+            <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
+              <img
+                src="car6.jpg"
+                alt=""
+                className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
+              />
               <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center md:justify-normal md:pl-4 justify-center">
+                <div className="flex flex-row items-center justify-center md:justify-normal md:pl-4">
                   <h1 className="px-2 text-slate-500">Topic Name</h1>
                   <button
                     className="h-2 w-2 rounded-full bg-blue-400"
@@ -230,18 +227,22 @@ const Home: NextPage = () => {
                   ></button>
                   <h1 className="px-2 text-slate-500">1 jun 2023</h1>
                 </div>
-                <h1 className="px-2 text-2xl font-bold mx-4 md:mx-0 md:text-left text-center">
+                <h1 className="mx-4 px-2 text-center text-2xl font-bold md:mx-0 md:text-left">
                   Lorem Ipsum dolor sit amet consectetur. Porta velit
                 </h1>
               </div>
             </div>
             <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
           </div>
-          <div className="flex flex-col md:items-center mx-0 md:mx-6">
-            <div className="mb-2 flex flex-col md:mx-60 md:flex-row items-center md:items-start justify-center md:justify-start mx-16">
-              <img src="car6.jpg" alt="" className="md:mx-6 h-40 w-72 md:h-60 md:w-96 rounded-xl md:rounded-none md:my-0 my-4"/>
+          <div className="mx-0 flex flex-col md:mx-6 md:items-center">
+            <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
+              <img
+                src="car6.jpg"
+                alt=""
+                className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
+              />
               <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center md:justify-normal md:pl-4 justify-center">
+                <div className="flex flex-row items-center justify-center md:justify-normal md:pl-4">
                   <h1 className="px-2 text-slate-500">Topic Name</h1>
                   <button
                     className="h-2 w-2 rounded-full bg-blue-400"
@@ -249,7 +250,7 @@ const Home: NextPage = () => {
                   ></button>
                   <h1 className="px-2 text-slate-500">1 jun 2023</h1>
                 </div>
-                <h1 className="px-2 text-2xl font-bold mx-4 md:mx-0 md:text-left text-center">
+                <h1 className="mx-4 px-2 text-center text-2xl font-bold md:mx-0 md:text-left">
                   Lorem Ipsum dolor sit amet consectetur. Porta velit
                 </h1>
               </div>
