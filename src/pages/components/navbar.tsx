@@ -44,7 +44,10 @@ const Navbar = () => {
   const scope = useMenuAnimation(isOpen);
 
   return (
-    <nav className="z-0 h-24 max-h-min md:h-auto md:w-full bg-white items-center" ref={scope}>
+    <nav
+      className="z-0 h-24 max-h-min items-center bg-white md:h-auto md:w-full"
+      ref={scope}
+    >
       <div className="mx-auto max-w-screen-xl items-center justify-between p-4">
         <div className="flex flex-row justify-between md:items-end">
           <Link
@@ -58,9 +61,10 @@ const Navbar = () => {
               <p className="text-black">ite</p>
             </div>
           </Link>
-          <div className="flex w-1/2 flex-col md:items-center md:justify-center items-end pt-2 md:pt-0">
+          <div className="flex w-1/2 flex-col items-end pt-2 md:items-center md:justify-center md:pt-0">
             <motion.button
-              whileTap={{ scale: 0.97 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               type="button"
               tabIndex={0}
               className="dropdown dropdown-end sticky top-0 h-10 w-10 rounded-lg p-2 text-sm md:hidden"
@@ -72,9 +76,13 @@ const Navbar = () => {
                 </svg>
               </div>
             </motion.button>
-            <div tabIndex={0} className="relative py-2 md:invisible" style={{
-              visibility: isOpen ? "visible" : "hidden"
-            }}>
+            <div
+              tabIndex={0}
+              className="relative py-2 md:invisible"
+              style={{
+                visibility: isOpen ? "visible" : "hidden",
+              }}
+            >
               <div
                 className="absolute right-0 z-10 flex w-40 flex-col items-center rounded-lg border-none p-2"
                 style={{
