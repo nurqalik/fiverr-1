@@ -52,19 +52,60 @@ const Navbar = () => {
         <div className="flex flex-row justify-between md:items-end">
           <Link
             href={"/"}
-            className="items-center p-2 pt-4 text-left font-sans text-3xl font-semibold text-blue-800 hover:text-blue-900"
+            className="items-center p-2 pt-4 text-left font-sans text-3xl font-semibold hover:text-blue-900"
           >
             <div className="flex flex-row">
-              <p>W</p>
-              <p className="text-black">eb</p>
-              <p>S</p>
-              <p className="text-black">ite</p>
+              <motion.p
+                transition={{ delay: 0.5 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0, color: "#2c5282" }}
+                whileInView={{ color: "#2c5282" }}
+                viewport={{ once: true }}
+                className="text-black"
+              >
+                W
+              </motion.p>
+              <motion.p
+                transition={{ delay: 0.7 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="text-black"
+              >
+                eb
+              </motion.p>
+              <motion.p
+                transition={{ delay: 0.9 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0, color: "#2c5282" }}
+                whileInView={{ color: "#2c5282" }}
+                viewport={{ once: true }}
+                className="text-black"
+              >
+                S
+              </motion.p>
+              <motion.p
+                transition={{ delay: 1.1 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="text-black"
+              >
+                ite
+              </motion.p>
             </div>
           </Link>
           <div className="flex w-1/2 flex-col items-end pt-2 md:items-center md:justify-center md:pt-0">
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              transition={{ delay: 0.5 }}
+              initial={{ opacity: 1, y: -100 }}
+              animate={{ y: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               type="button"
               tabIndex={0}
               className="dropdown dropdown-end sticky top-0 h-10 w-10 rounded-lg p-2 text-sm md:hidden"
@@ -76,7 +117,12 @@ const Navbar = () => {
                 </svg>
               </div>
             </motion.button>
-            <div
+            <motion.div
+              transition={{ delay: 0.5 }}
+              initial={{ opacity: 1, y: -100 }}
+              animate={{ y: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               tabIndex={0}
               className="relative py-2 md:invisible"
               style={{
@@ -138,8 +184,15 @@ const Navbar = () => {
                   </li>
                 </ul>{" "}
               </div>
-            </div>
-            <div className="collapse w-auto flex-row rounded-none md:visible md:pt-2.5">
+            </motion.div>
+            <motion.div
+              transition={{ delay: 0.5 }}
+              initial={{ opacity: 1, y: -100 }}
+              animate={{ y: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="collapse w-auto flex-row rounded-none md:visible md:pt-2.5"
+            >
               <input
                 type="text"
                 className="border-1 mx-4 rounded-full border border-slate-400 p-4 text-black"
@@ -169,7 +222,7 @@ const Navbar = () => {
               >
                 About Us
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -8,8 +8,9 @@ const Home: NextPage = () => {
         <div className="my-10 md:my-40">
           <motion.div
             className="flex flex-row justify-center"
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ y: 0 }}
             transition={{ delay: 0.5 }}
-            initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
@@ -24,7 +25,8 @@ const Home: NextPage = () => {
           <motion.h1
             className="text-center text-5xl font-bold md:text-7xl"
             transition={{ delay: 0.5 }}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ y: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
@@ -32,8 +34,9 @@ const Home: NextPage = () => {
           </motion.h1>
           <motion.p
             className="m-5 text-center text-sm"
-            transition={{ delay: 0.5 }}
-            initial={{ opacity: 0 }}
+            transition={{ delay: 0.6 }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ y: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
@@ -43,8 +46,9 @@ const Home: NextPage = () => {
           </motion.p>
           <motion.div
             className="flex flex-col items-center justify-center md:flex-row"
-            transition={{ delay: 0.5 }}
-            initial={{ opacity: 0 }}
+            transition={{ delay: 0.7 }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ y: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
@@ -60,8 +64,9 @@ const Home: NextPage = () => {
         </div>
         <motion.div
           className="mx-auto flex flex-col md:my-40 md:flex-row"
-          transition={{ delay: 0.5 }}
-          initial={{ opacity: 0 }}
+          transition={{ delay: 0.8 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ y: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
@@ -136,7 +141,8 @@ const Home: NextPage = () => {
         <motion.div
           className="container mx-auto my-10"
           transition={{ delay: 0.5 }}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ y: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
@@ -160,29 +166,78 @@ const Home: NextPage = () => {
                 />{" "}
               </svg>
             </button>
-            <ul className="flex flex-col md:flex-row">
-              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+            <motion.ul className="flex flex-col md:flex-row">
+              <motion.li
+                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
+                transition={{ delay: 0.5 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
                 Time Management
-              </li>
-              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+              </motion.li>
+              <motion.li
+                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
+                transition={{ delay: 0.6 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
                 Energy
-              </li>
-              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+              </motion.li>
+              <motion.li
+                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
+                transition={{ delay: 0.7 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
                 Goal Setting
-              </li>
-              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+              </motion.li>
+              <motion.li
+                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
+                transition={{ delay: 0.8 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
                 Genomics
-              </li>
-              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+              </motion.li>
+              <motion.li
+                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
+                transition={{ delay: 0.9 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
                 Focus
-              </li>
-              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+              </motion.li>
+              <motion.li
+                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
+                transition={{ delay: 1 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
                 Efficiency
-              </li>
-              <li className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white">
+              </motion.li>
+              <motion.li
+                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
+                transition={{ delay: 1.1 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
                 Technology
-              </li>
-            </ul>
+              </motion.li>
+            </motion.ul>
             <button className="invisible mx-8 md:visible">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -201,11 +256,12 @@ const Home: NextPage = () => {
             </button>
           </div>
         </motion.div>
-        <div className="container mx-auto my-10 w-full">
+        <motion.div className="container mx-auto my-10 w-full">
           <motion.div
             className="mx-0 flex flex-col md:mx-6 md:items-center"
             transition={{ delay: 0.5 }}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ y: 0 }}
             whileInView={{ opacity: 1 }}
           >
             <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
@@ -215,7 +271,7 @@ const Home: NextPage = () => {
                 className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
               />
               <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center justify-center md:justify-normal md:pl-4">
+                <div className="flex flex-row items-center justify-center md:justify-normal">
                   <h1 className="px-2 text-slate-500">Topic Name</h1>
                   <button
                     className="h-2 w-2 rounded-full bg-blue-400"
@@ -223,7 +279,7 @@ const Home: NextPage = () => {
                   ></button>
                   <h1 className="px-2 text-slate-500">1 jun 2023</h1>
                 </div>
-                <h1 className="mx-4 px-2 text-center text-2xl font-bold md:mx-0 md:text-left">
+                <h1 className="mx-4 px-2 text-center text-xl font-bold md:mx-0 md:text-left">
                   Lorem Ipsum dolor sit amet consectetur. Porta velit
                 </h1>
               </div>
@@ -233,7 +289,8 @@ const Home: NextPage = () => {
           <motion.div
             className="mx-0 flex flex-col md:mx-6 md:items-center"
             transition={{ delay: 0.5 }}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ y: 0 }}
             whileInView={{ opacity: 1 }}
           >
             <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
@@ -243,7 +300,7 @@ const Home: NextPage = () => {
                 className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
               />
               <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center justify-center md:justify-normal md:pl-4">
+                <div className="flex flex-row items-center justify-center md:justify-normal">
                   <h1 className="px-2 text-slate-500">Topic Name</h1>
                   <button
                     className="h-2 w-2 rounded-full bg-blue-400"
@@ -251,7 +308,7 @@ const Home: NextPage = () => {
                   ></button>
                   <h1 className="px-2 text-slate-500">1 jun 2023</h1>
                 </div>
-                <h1 className="mx-4 px-2 text-center text-2xl font-bold md:mx-0 md:text-left">
+                <h1 className="mx-4 px-2 text-center text-xl font-bold md:mx-0 md:text-left">
                   Lorem Ipsum dolor sit amet consectetur. Porta velit
                 </h1>
               </div>
@@ -261,7 +318,8 @@ const Home: NextPage = () => {
           <motion.div
             className="mx-0 flex flex-col md:mx-6 md:items-center"
             transition={{ delay: 0.5 }}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ y: 0 }}
             whileInView={{ opacity: 1 }}
           >
             <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
@@ -271,7 +329,7 @@ const Home: NextPage = () => {
                 className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
               />
               <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center justify-center md:justify-normal md:pl-4">
+                <div className="flex flex-row items-center justify-center md:justify-normal">
                   <h1 className="px-2 text-slate-500">Topic Name</h1>
                   <button
                     className="h-2 w-2 rounded-full bg-blue-400"
@@ -279,7 +337,7 @@ const Home: NextPage = () => {
                   ></button>
                   <h1 className="px-2 text-slate-500">1 jun 2023</h1>
                 </div>
-                <h1 className="mx-4 px-2 text-center text-2xl font-bold md:mx-0 md:text-left">
+                <h1 className="mx-4 px-2 text-center text-xl font-bold md:mx-0 md:text-left">
                   Lorem Ipsum dolor sit amet consectetur. Porta velit
                 </h1>
               </div>
@@ -289,7 +347,8 @@ const Home: NextPage = () => {
           <motion.div
             className="mx-0 flex flex-col md:mx-6 md:items-center"
             transition={{ delay: 0.5 }}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ y: 0 }}
             whileInView={{ opacity: 1 }}
           >
             <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
@@ -299,7 +358,7 @@ const Home: NextPage = () => {
                 className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
               />
               <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center justify-center md:justify-normal md:pl-4">
+                <div className="flex flex-row items-center justify-center md:justify-normal">
                   <h1 className="px-2 text-slate-500">Topic Name</h1>
                   <button
                     className="h-2 w-2 rounded-full bg-blue-400"
@@ -307,14 +366,14 @@ const Home: NextPage = () => {
                   ></button>
                   <h1 className="px-2 text-slate-500">1 jun 2023</h1>
                 </div>
-                <h1 className="mx-4 px-2 text-center text-2xl font-bold md:mx-0 md:text-left">
+                <h1 className="mx-4 px-2 text-center text-xl font-bold md:mx-0 md:text-left">
                   Lorem Ipsum dolor sit amet consectetur. Porta velit
                 </h1>
               </div>
             </div>
             <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

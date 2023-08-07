@@ -8,12 +8,19 @@ const Footer = () => {
         transition={{ delay: 0.5 }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{once: true}}
+        viewport={{ once: true }}
       >
         <div className="container mx-auto pb-2 md:pb-4">
-          <div className="mx-6 flex flex-row md:mx-64">
+          <div className="mx-6 flex flex-row md:mx-56">
             <div className="mx-4 mt-10 w-[40%] text-left md:mt-20 md:w-[70%]">
-              <h1 className="mb-3 flex flex-row md:mb-2">
+              <motion.h1
+                transition={{ delay: 0.5 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="mb-3 flex flex-row md:mb-2"
+              >
                 <p className="text-bold text-sm font-bold text-blue-800 md:text-2xl">
                   W
                 </p>
@@ -22,31 +29,59 @@ const Footer = () => {
                   S
                 </p>
                 <p className="text-bold  text-sm font-bold md:text-2xl">ite</p>
-              </h1>
-              <p className="text-xs text-slate-600 md:text-base">
+              </motion.h1>
+              <motion.p
+                transition={{ delay: 1 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="text-xs text-slate-600 md:text-base"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
                 nisi ut aliquip ex ea commodo consequat.
-              </p>
+              </motion.p>
             </div>
             <div className="mx-4 mt-10 w-[30%] text-left md:mt-20 md:w-[15%]">
-              <h1 className="mb-3 text-sm font-semibold text-slate-700 md:mb-5 md:text-base">
+              <motion.h1
+                transition={{ delay: 0.5 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="mb-3 text-sm font-semibold text-slate-700 md:mb-5 md:text-base"
+              >
                 About Us
-              </h1>
-              <ul>
+              </motion.h1>
+              <motion.ul
+                transition={{ delay: 1 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+              >
                 <li className="text-xs text-slate-600">Our Team</li>
                 <li className="text-xs text-slate-600">Pitch a Story</li>
                 <li className="text-xs text-slate-600">Our Resources</li>
                 <li className="text-xs text-slate-600">Privacy</li>
                 <li className="text-xs text-slate-600">Polygraph Sutid</li>
-              </ul>
+              </motion.ul>
             </div>
             <div className="mx-4 mt-10 w-[30%] text-left md:mt-20 md:w-[15%]">
-              <h1 className="mb-3 text-sm font-semibold text-slate-700 md:mb-5 md:text-base">
+              <motion.h1
+                transition={{ delay: 0.5 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+                className="mb-3 text-sm font-semibold text-slate-700 md:mb-5 md:text-base"
+              >
                 Follow Us
-              </h1>
-              <ul>
+              </motion.h1>
+              <motion.ul
+                transition={{ delay: 1 }}
+                initial={{ opacity: 1, y: -100 }}
+                animate={{ y: 0 }}
+                whileInView={{ opacity: 1 }}
+              >
                 <li className="text-xs text-slate-600">Twitter</li>
                 <li className="text-xs text-slate-600">Instagram</li>
                 <li className="text-xs text-slate-600">Facebook</li>
@@ -54,7 +89,7 @@ const Footer = () => {
                 <li className="text-xs text-slate-600">Tiktok</li>
                 <li className="text-xs text-slate-600">Mastodon</li>
                 <li className="text-xs text-slate-600">RSS</li>
-              </ul>
+              </motion.ul>
             </div>
           </div>
           <div className="mt-4 w-full bg-slate-200 md:mt-14">
