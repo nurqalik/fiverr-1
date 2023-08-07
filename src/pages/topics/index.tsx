@@ -5,17 +5,17 @@ const Topics: NextPage = () => {
   return (
     <>
       <div className="mx-auto items-center bg-slate-200">
-        <div className="container mx-auto mb-10 md:mb-40 flex flex-col justify-center">
-          <motion.h1 className="my-4 mt-10 md:mt-40 bg-gradient-to-r from-blue-500 to-blue-800 bg-clip-text text-center text-4xl md:text-6xl font-bold text-transparent"
-          initial={{ opacity: 1, y: -100 }}
+        <div className="container mx-auto md:mb-40 flex flex-col justify-center">
+          <motion.h1 className="my-4 mt-20 md:mt-40 bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-center text-4xl md:text-6xl font-bold text-transparent"
+          initial={{ opacity: 0, y: -100 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.5 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}>
             Topic Name
           </motion.h1>
-          <motion.p className="font-base text-sm md:text-normal px-10 md:px-44 text-center text-slate-600"
-          initial={{ opacity: 1, y: -100 }}
+          <motion.p className="font-base mb-10 md:mb-0 text-sm md:text-normal px-10 md:px-44 text-center text-slate-600"
+          initial={{ opacity: 0, y: -100 }}
           animate={{ y: 0 }}
           transition={{ delay: 0.7 }}
           whileInView={{ opacity: 1 }}
@@ -35,7 +35,7 @@ const Topics: NextPage = () => {
             <img
               src="car6.jpg"
               alt=""
-              className="h-40 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
+              className="h-52 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
             />
             <div className="flex flex-col my-4 max-w-sm">
               <h1 className="font-bold text-xl px-16 md:px-2 text-center md:text-left pb-2 ">Lorem Ipsum Dolor Sit Amet consectetur. Porta velit</h1>
@@ -51,7 +51,7 @@ const Topics: NextPage = () => {
             <img
               src="car6.jpg"
               alt=""
-              className="h-40 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
+              className="h-52 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
             />
             <div className="flex flex-col my-4 max-w-sm">
               <h1 className="font-bold text-xl px-16 md:px-2 text-center md:text-left pb-2 ">Lorem Ipsum Dolor Sit Amet consectetur. Porta velit</h1>
@@ -67,7 +67,7 @@ const Topics: NextPage = () => {
             <img
               src="car6.jpg"
               alt=""
-              className="h-40 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
+              className="h-52 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
             />
             <div className="flex flex-col my-4 max-w-sm">
               <h1 className="font-bold text-xl px-16 md:px-2 text-center md:text-left pb-2 ">Lorem Ipsum Dolor Sit Amet consectetur. Porta velit</h1>
@@ -83,7 +83,7 @@ const Topics: NextPage = () => {
             <img
               src="car6.jpg"
               alt=""
-              className="h-40 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
+              className="h-52 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
             />
             <div className="flex flex-col my-4 max-w-sm">
               <h1 className="font-bold text-xl px-16 md:px-2 text-center md:text-left pb-2 ">Lorem Ipsum Dolor Sit Amet consectetur. Porta velit</h1>

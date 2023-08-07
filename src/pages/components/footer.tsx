@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="mx-4 mt-10 w-[40%] text-left md:mt-20 md:w-[70%]">
               <motion.h1
                 transition={{ delay: 0.5 }}
-                initial={{ opacity: 1, y: -100 }}
+                initial={{ opacity: 1, y: 100 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -32,7 +32,7 @@ const Footer = () => {
               </motion.h1>
               <motion.p
                 transition={{ delay: 1 }}
-                initial={{ opacity: 1, y: -100 }}
+                initial={{ opacity: 1, y: 100 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 className="text-xs text-slate-600 md:text-base"
@@ -46,7 +46,7 @@ const Footer = () => {
             <div className="mx-4 mt-10 w-[30%] text-left md:mt-20 md:w-[15%]">
               <motion.h1
                 transition={{ delay: 0.5 }}
-                initial={{ opacity: 1, y: -100 }}
+                initial={{ opacity: 1, y: 100 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 className="mb-3 text-sm font-semibold text-slate-700 md:mb-5 md:text-base"
@@ -55,7 +55,7 @@ const Footer = () => {
               </motion.h1>
               <motion.ul
                 transition={{ delay: 1 }}
-                initial={{ opacity: 1, y: -100 }}
+                initial={{ opacity: 1, y: 100 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
               >
@@ -69,7 +69,7 @@ const Footer = () => {
             <div className="mx-4 mt-10 w-[30%] text-left md:mt-20 md:w-[15%]">
               <motion.h1
                 transition={{ delay: 0.5 }}
-                initial={{ opacity: 1, y: -100 }}
+                initial={{ opacity: 1, y: 100 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 className="mb-3 text-sm font-semibold text-slate-700 md:mb-5 md:text-base"
@@ -78,7 +78,7 @@ const Footer = () => {
               </motion.h1>
               <motion.ul
                 transition={{ delay: 1 }}
-                initial={{ opacity: 1, y: -100 }}
+                initial={{ opacity: 1, y: 100 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
               >
