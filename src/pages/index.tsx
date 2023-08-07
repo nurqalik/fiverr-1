@@ -1,7 +1,42 @@
+import { Topic, Topics } from "@prisma/client";
 import { motion } from "framer-motion";
 import { type NextPage } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { api } from "~/utils/api";
+
+export interface SelectTopic extends Topic {
+  topicsName: string;
+}
 
 const Home: NextPage = () => {
+  const [topics, setTopics] = useState<Topics[]>([]);
+  const [topic, setTopic] = useState<SelectTopic[]>([]);
+  api.topics.getAll.useQuery(undefined, {
+    onSuccess: (data) => {
+      setTopics(data);
+    },
+  });
+  api.topic.getAll.useQuery(undefined, {
+    onSuccess: (data) => {
+      setTopic(
+        data.map(
+          (item) =>
+            ({
+              id: item.id,
+              title: item.title,
+              img: item.img,
+              description: item.description,
+              date: item.date,
+              topicId: item.topicId,
+              topicsName: item.topics.name,
+            } as SelectTopic)
+        )
+      );
+    },
+  });
+
   return (
     <>
       <div className="container mx-auto mt-5 md:mt-40">
@@ -167,76 +202,19 @@ const Home: NextPage = () => {
               </svg>
             </button>
             <motion.ul className="flex flex-col md:flex-row">
-              <motion.li
-                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
-                transition={{ delay: 0.5 }}
-                initial={{ opacity: 1, y: -100 }}
-                animate={{ y: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                Time Management
-              </motion.li>
-              <motion.li
-                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
-                transition={{ delay: 0.6 }}
-                initial={{ opacity: 1, y: -100 }}
-                animate={{ y: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                Energy
-              </motion.li>
-              <motion.li
-                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
-                transition={{ delay: 0.7 }}
-                initial={{ opacity: 1, y: -100 }}
-                animate={{ y: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                Goal Setting
-              </motion.li>
-              <motion.li
-                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
-                transition={{ delay: 0.8 }}
-                initial={{ opacity: 1, y: -100 }}
-                animate={{ y: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                Genomics
-              </motion.li>
-              <motion.li
-                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
-                transition={{ delay: 0.9 }}
-                initial={{ opacity: 1, y: -100 }}
-                animate={{ y: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                Focus
-              </motion.li>
-              <motion.li
-                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
-                transition={{ delay: 1 }}
-                initial={{ opacity: 1, y: -100 }}
-                animate={{ y: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                Efficiency
-              </motion.li>
-              <motion.li
-                className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
-                transition={{ delay: 1.1 }}
-                initial={{ opacity: 1, y: -100 }}
-                animate={{ y: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-              >
-                Technology
-              </motion.li>
+              {topics.map((item) => (
+                <motion.li
+                  key={item.id}
+                  className="mx-4 rounded-lg px-4 py-2 text-center hover:bg-blue-800 hover:text-white"
+                  transition={{ delay: 0.5 }}
+                  initial={{ opacity: 1, y: -100 }}
+                  animate={{ y: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                >
+                  {item.name}
+                </motion.li>
+              ))}
             </motion.ul>
             <button className="invisible mx-8 md:visible">
               <svg
@@ -257,122 +235,42 @@ const Home: NextPage = () => {
           </div>
         </motion.div>
         <motion.div className="container mx-auto my-10 w-full">
-          <motion.div
-            className="mx-0 flex flex-col md:mx-6 md:items-center"
-            transition={{ delay: 0.5 }}
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ y: 0 }}
-            whileInView={{ opacity: 1 }}
-          >
-            <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
-              <img
-                src="car6.jpg"
-                alt=""
-                className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
-              />
-              <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center justify-center md:justify-normal">
-                  <h1 className="px-2 text-slate-500">Topic Name</h1>
-                  <button
-                    className="h-2 w-2 rounded-full bg-blue-400"
-                    disabled
-                  ></button>
-                  <h1 className="px-2 text-slate-500">1 jun 2023</h1>
+          {topic.map((item) => (
+            <motion.div
+              key={item.id}
+              className="mx-0 flex flex-col md:mx-6 md:items-center"
+              transition={{ delay: 0.5 }}
+              initial={{ opacity: 0, y: -100 }}
+              animate={{ y: 0 }}
+              whileInView={{ opacity: 1 }}
+            >
+              <Link className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start"
+              href={`/topics/${item.id}`}>
+                <Image
+                  src={item.img}
+                  width={0}
+                  height={0}
+                  sizes="100vh"
+                  alt=""
+                  className="my-4 h-40 w-72 object-cover rounded-xl md:mx-6 md:my-0 md:h-60 md:w-72 md:rounded-none"
+                />
+                <div className="mx-6 md:mx-0">
+                  <div className="flex flex-row items-center justify-center md:justify-normal">
+                    <h1 className="px-2 text-slate-500">{item.topicsName}</h1>
+                    <button
+                      className="h-2 w-2 rounded-full bg-blue-400"
+                      disabled
+                    ></button>
+                    <h1 className="px-2 text-slate-500">{item.date.getMonth()} {" "}{item.date.getFullYear()}</h1>
+                  </div>
+                  <h1 className="mx-4 px-2 text-center text-xl font-bold md:mx-0 md:text-left">
+                    {item.title}
+                  </h1>
                 </div>
-                <h1 className="mx-4 px-2 text-center text-xl font-bold md:mx-0 md:text-left">
-                  Lorem Ipsum dolor sit amet consectetur. Porta velit
-                </h1>
-              </div>
-            </div>
-            <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
-          </motion.div>
-          <motion.div
-            className="mx-0 flex flex-col md:mx-6 md:items-center"
-            transition={{ delay: 0.5 }}
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ y: 0 }}
-            whileInView={{ opacity: 1 }}
-          >
-            <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
-              <img
-                src="car6.jpg"
-                alt=""
-                className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
-              />
-              <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center justify-center md:justify-normal">
-                  <h1 className="px-2 text-slate-500">Topic Name</h1>
-                  <button
-                    className="h-2 w-2 rounded-full bg-blue-400"
-                    disabled
-                  ></button>
-                  <h1 className="px-2 text-slate-500">1 jun 2023</h1>
-                </div>
-                <h1 className="mx-4 px-2 text-center text-xl font-bold md:mx-0 md:text-left">
-                  Lorem Ipsum dolor sit amet consectetur. Porta velit
-                </h1>
-              </div>
-            </div>
-            <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
-          </motion.div>
-          <motion.div
-            className="mx-0 flex flex-col md:mx-6 md:items-center"
-            transition={{ delay: 0.5 }}
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ y: 0 }}
-            whileInView={{ opacity: 1 }}
-          >
-            <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
-              <img
-                src="car6.jpg"
-                alt=""
-                className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
-              />
-              <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center justify-center md:justify-normal">
-                  <h1 className="px-2 text-slate-500">Topic Name</h1>
-                  <button
-                    className="h-2 w-2 rounded-full bg-blue-400"
-                    disabled
-                  ></button>
-                  <h1 className="px-2 text-slate-500">1 jun 2023</h1>
-                </div>
-                <h1 className="mx-4 px-2 text-center text-xl font-bold md:mx-0 md:text-left">
-                  Lorem Ipsum dolor sit amet consectetur. Porta velit
-                </h1>
-              </div>
-            </div>
-            <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
-          </motion.div>
-          <motion.div
-            className="mx-0 flex flex-col md:mx-6 md:items-center"
-            transition={{ delay: 0.5 }}
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ y: 0 }}
-            whileInView={{ opacity: 1 }}
-          >
-            <div className="mx-16 mb-2 flex flex-col items-center justify-center md:mx-60 md:flex-row md:items-start md:justify-start">
-              <img
-                src="car6.jpg"
-                alt=""
-                className="my-4 h-40 w-72 rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
-              />
-              <div className="mx-6 md:mx-0">
-                <div className="flex flex-row items-center justify-center md:justify-normal">
-                  <h1 className="px-2 text-slate-500">Topic Name</h1>
-                  <button
-                    className="h-2 w-2 rounded-full bg-blue-400"
-                    disabled
-                  ></button>
-                  <h1 className="px-2 text-slate-500">1 jun 2023</h1>
-                </div>
-                <h1 className="mx-4 px-2 text-center text-xl font-bold md:mx-0 md:text-left">
-                  Lorem Ipsum dolor sit amet consectetur. Porta velit
-                </h1>
-              </div>
-            </div>
-            <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
-          </motion.div>
+              </Link>
+              <hr className="invisible mb-2 h-1 w-2/3 border bg-slate-400 md:visible" />
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </>
