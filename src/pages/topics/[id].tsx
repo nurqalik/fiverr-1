@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { NextPage } from "next";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 const Topic: NextPage = () => {
@@ -46,9 +47,9 @@ const Topic: NextPage = () => {
             </div>
             <div className="mx-4 flex flex-col">
               <div className="text-xs">Author Name</div>
-              <a href="/" className="text-xs text-blue-500">
+              <Link href="/" className="text-xs text-blue-500">
                 @Twitter
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
