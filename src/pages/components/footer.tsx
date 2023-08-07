@@ -24,11 +24,15 @@ const Footer = () => {
                 <p className="text-bold text-sm font-bold text-blue-800 md:text-2xl">
                   W
                 </p>
-                <p className="text-bold  text-sm font-bold md:text-2xl">eb</p>
+                <p className="text-bold  text-sm font-bold text-black md:text-2xl">
+                  eb
+                </p>
                 <p className="text-bold text-sm font-bold text-blue-800 md:text-2xl">
                   S
                 </p>
-                <p className="text-bold  text-sm font-bold md:text-2xl">ite</p>
+                <p className="text-bold  text-sm font-bold text-black md:text-2xl">
+                  ite
+                </p>
               </motion.h1>
               <motion.p
                 transition={{ delay: 1 }}

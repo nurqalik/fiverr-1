@@ -9,30 +9,40 @@ const Topic: NextPage = () => {
     <>
       <div className="container mx-auto mt-20 items-center">
         <div className="flex flex-col items-center justify-center">
-          <motion.div className="text-base font-semibold text-slate-700"
-          initial={{ opacity: 1, y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ delay: 0.5 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}>
+          <motion.div
+            className="text-base font-semibold text-slate-700"
+            initial={{ opacity: 1, y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.5 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
             Topic Name
           </motion.div>
-          <motion.div className="mb-2 max-w-xs md:max-w-4xl text-center text-2xl md:text-6xl font-bold"
-          initial={{ opacity: 1, y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ delay: 0.5 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}>
+          <motion.div
+            className="mb-2 max-w-xs text-center text-2xl font-bold md:max-w-4xl md:text-6xl"
+            initial={{ opacity: 1, y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.5 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
             Lorem ipsum dolor sit amet consectetur.
           </motion.div>
-          <motion.div className="my-2 flex flex-row"
-          initial={{ opacity: 1, y: -100 }}
-          animate={{ y: 0 }}
-          transition={{ delay: 0.5 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}>
-            <div className="h-8 md:h-10 w-8 md:w-10 rounded-full border border-solid border-slate-400 object-cover">
-              <img src="../profile.png" className="w-full object-cover" alt="" />
+          <motion.div
+            className="my-2 flex flex-row"
+            initial={{ opacity: 1, y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ delay: 0.5 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <div className="h-8 w-8 rounded-full border border-solid border-slate-400 object-cover md:h-10 md:w-10">
+              <img
+                src="../profile.png"
+                className="w-full object-cover"
+                alt=""
+              />
             </div>
             <div className="mx-4 flex flex-col">
               <div className="text-xs">Author Name</div>
@@ -43,9 +53,11 @@ const Topic: NextPage = () => {
           </motion.div>
         </div>
         <div className="container mx-auto">
-          <div className="mx-16 md:mx-80 mt-5 flex flex-col">
-            <h1 className="text-center md:text-left text-lg md:text-4xl font-semibold">Title content</h1>
-            <p className="my-2 md:my-4 text-sm">
+          <div className="mx-16 mt-5 flex flex-col md:mx-80">
+            <h1 className="text-center text-lg font-semibold md:text-left md:text-4xl">
+              Title content
+            </h1>
+            <p className="my-2 text-sm md:my-4 md:text-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -58,7 +70,7 @@ const Topic: NextPage = () => {
               className="w-full rounded-lg object-fill"
               alt=""
             />
-            <p className="my-2 md:my-4 text-base">
+            <p className="my-2 text-sm md:my-4 md:text-base">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -73,16 +85,18 @@ const Topic: NextPage = () => {
             </p>
           </div>
         </div>
-        <div className="container mx-auto">
-          <div className="mx-16 md:mx-80 rounded-lg bg-slate-200">
+        <div className="container mx-auto bg-slate-200 md:bg-white">
+          <div className="mx-16 rounded-lg bg-slate-200 md:mx-80">
             <div className="flex flex-col">
-              <div className="mx-8 md:mx-16 mt-8 mb-2 flex flex-row items-center">
+              <div className="mb-2 mt-8 flex flex-row items-center md:mx-16">
                 <button className="h-6 w-6 rounded-full bg-blue-600" disabled>
                   <p className="text-base font-semibold text-white">i</p>
                 </button>
-                <div className="mx-2 text-base md:text-xl font-bold">Lorem ipsul dolor:</div>
+                <div className="mx-2 text-base font-bold md:text-xl">
+                  Lorem ipsul dolor:
+                </div>
               </div>
-              <p className="mx-8 md:mx-16 text-sm md:text-base mb-8">
+              <p className="mb-8 text-sm md:mx-16 md:text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -95,7 +109,7 @@ const Topic: NextPage = () => {
           </div>
         </div>
         <div className="container mx-auto">
-          <div className="mx-16 md:mx-80 mt-5">
+          <div className="mx-16 mt-5 md:mx-80">
             <p className="text-sm md:text-base">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
@@ -112,10 +126,12 @@ const Topic: NextPage = () => {
           </div>
         </div>
         <div className="container mx-auto mb-40">
-          <div className="mx-16 md:mx-80 flex flex-col">
-            <div className="text-xl md:text-4xl font-bold my-4">Content Title 2</div>
-            <div className="text-sm md:text-base mb-4">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          <div className="mx-16 flex flex-col md:mx-80">
+            <div className="my-4 text-xl font-bold md:text-4xl">
+              Content Title 2
+            </div>
+            <div className="mb-4 text-sm md:text-base">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae ab illo inventore veritatis et quasi architecto beatae vitae
               dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
@@ -129,12 +145,20 @@ const Topic: NextPage = () => {
             </div>
             <div className="flex flex-row justify-between">
               <div className="flex flex-col">
-                <div className="text-base md:text-xl font-bold text-blue-400">DATE:</div>
-                <p className="font-semibold text-xs md:text-base">3 oct. 2023</p>
+                <div className="text-base font-bold text-blue-400 md:text-xl">
+                  DATE:
+                </div>
+                <p className="text-xs font-semibold md:text-base">
+                  3 oct. 2023
+                </p>
               </div>
               <div className="flex flex-col">
-                <div className="text-base md:text-xl font-bold text-blue-400">SHARE:</div>
-                <p className="font-semibold text-xs md:text-base">copy the link</p>
+                <div className="text-base font-bold text-blue-400 md:text-xl">
+                  SHARE:
+                </div>
+                <p className="text-xs font-semibold md:text-base">
+                  copy the link
+                </p>
               </div>
             </div>
           </div>
