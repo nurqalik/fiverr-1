@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <motion.footer
-        className="mt-20 w-full bg-slate-200"
+        className="w-full bg-slate-200"
         transition={{ delay: 0.5 }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

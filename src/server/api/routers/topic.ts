@@ -15,6 +15,10 @@ export const topicRouter = createTRPCRouter({
       where: {
         id: input,
       },
+      include: {
+        topics: true
+      }
     });
+    return topic
   }),
 });

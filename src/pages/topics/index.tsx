@@ -1,7 +1,31 @@
+import { Topic } from "@prisma/client";
 import { motion } from "framer-motion";
 import { NextPage } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { api } from "~/utils/api";
 
 const Topics: NextPage = () => {
+  const [topic, setTopic] = useState<Topic[]>([])
+  api.topic.getAll.useQuery(undefined, {
+    onSuccess: (data) => {
+      setTopic(
+        data.map(
+          (item) =>
+            ({
+              id: item.id,
+              title: item.title,
+              img: item.img,
+              description: item.description,
+              date: item.date,
+              topicId: item.topicId,
+            } as Topic)
+        )
+      );
+    },
+  });
+
   return (
     <>
       <div className="mx-auto items-center bg-slate-200">
@@ -14,7 +38,7 @@ const Topics: NextPage = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            Topic Name
+            Technology
           </motion.h1>
           <motion.p
             className="font-base md:text-normal mb-10 px-10 text-center text-sm text-slate-600 md:mb-0 md:px-44"
@@ -30,95 +54,37 @@ const Topics: NextPage = () => {
             aliquip ex ea commodo consequat.
           </motion.p>
         </div>
-        <motion.div className="container mx-auto my-4 flex flex-col items-center md:w-fit md:bg-white">
-          <motion.div
+        <motion.div className="container mx-auto flex flex-col items-center md:w-fit md:bg-white">
+          {topic.map((item) => (
+            <>
+            <motion.div
             className="mx-4 mb-2 mt-8 flex flex-col items-center md:flex-row"
             transition={{ delay: 0.5 }}
             initial={{ opacity: 0, y: -100 }}
             animate={{ y: 0 }}
             whileInView={{ opacity: 1 }}
+            key={item.id}
           >
-            <img
-              src="car6.jpg"
+            <Image
+              src={item.img}
               alt=""
-              className="h-52 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
+              width={0}
+              height={0}
+              sizes="100vh"
+              className="h-52 w-72 object-cover justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
             />
-            <div className="my-4 flex max-w-sm flex-col">
+            <Link href={`/topics/${item.id}`} className="my-4 flex max-w-sm flex-col">
               <h1 className="px-16 pb-2 text-center text-xl font-bold md:px-2 md:text-left ">
-                Lorem Ipsum Dolor Sit Amet consectetur. Porta velit
+                {item.title}
               </h1>
               <p className="px-16 text-center text-slate-400 md:px-2 md:text-left">
-                1 jun 2023
+                {item.date.toString()}
               </p>
-            </div>
+            </Link>
           </motion.div>
           <hr className="invisible my-2 h-1 w-2/3 justify-center border bg-slate-400 md:visible" />
-          <motion.div
-            className="mx-4 mb-2 mt-8 flex flex-col items-center md:flex-row"
-            transition={{ delay: 0.5 }}
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ y: 0 }}
-            whileInView={{ opacity: 1 }}
-          >
-            <img
-              src="car6.jpg"
-              alt=""
-              className="h-52 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
-            />
-            <div className="my-4 flex max-w-sm flex-col">
-              <h1 className="px-16 pb-2 text-center text-xl font-bold md:px-2 md:text-left ">
-                Lorem Ipsum Dolor Sit Amet consectetur. Porta velit
-              </h1>
-              <p className="px-16 text-center text-slate-400 md:px-2 md:text-left">
-                1 jun 2023
-              </p>
-            </div>
-          </motion.div>
-          <hr className="invisible my-2 h-1 w-2/3 justify-center border bg-slate-400 md:visible" />
-          <motion.div
-            className="mx-4 mb-2 mt-8 flex flex-col items-center md:flex-row"
-            transition={{ delay: 0.5 }}
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ y: 0 }}
-            whileInView={{ opacity: 1 }}
-          >
-            <img
-              src="car6.jpg"
-              alt=""
-              className="h-52 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
-            />
-            <div className="my-4 flex max-w-sm flex-col">
-              <h1 className="px-16 pb-2 text-center text-xl font-bold md:px-2 md:text-left ">
-                Lorem Ipsum Dolor Sit Amet consectetur. Porta velit
-              </h1>
-              <p className="px-16 text-center text-slate-400 md:px-2 md:text-left">
-                1 jun 2023
-              </p>
-            </div>
-          </motion.div>
-          <hr className="invisible my-2 h-1 w-2/3 justify-center border bg-slate-400 md:visible" />
-          <motion.div
-            className="mx-4 mb-2 mt-8 flex flex-col items-center md:flex-row"
-            transition={{ delay: 0.5 }}
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ y: 0 }}
-            whileInView={{ opacity: 1 }}
-          >
-            <img
-              src="car6.jpg"
-              alt=""
-              className="h-52 w-72 justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
-            />
-            <div className="my-4 flex max-w-sm flex-col">
-              <h1 className="px-16 pb-2 text-center text-xl font-bold md:px-2 md:text-left ">
-                Lorem Ipsum Dolor Sit Amet consectetur. Porta velit
-              </h1>
-              <p className="px-16 text-center text-slate-400 md:px-2 md:text-left">
-                1 jun 2023
-              </p>
-            </div>
-          </motion.div>
-          <hr className="invisible my-2 h-1 w-2/3 justify-center border bg-slate-400 md:visible" />
+            </>
+          ))}
         </motion.div>
       </div>
     </>
