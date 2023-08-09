@@ -49,16 +49,16 @@ const Home: NextPage = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h1 className="text-center text-5xl font-bold md:text-7xl">
+            <h1 className="text-center font-poppins text-5xl font-bold md:text-7xl">
               Lorem
             </h1>
-            <h1 className="bg-gradient-to-r from-blue-500 to-blue-800 bg-clip-text pl-2 text-5xl font-bold text-transparent md:text-7xl">
+            <h1 className="bg-gradient-to-r font-poppins from-blue-500 to-blue-800 bg-clip-text pl-2 text-5xl font-bold text-transparent md:text-7xl">
               {" "}
               Ipsum
             </h1>
           </motion.div>
           <motion.h1
-            className="text-center text-5xl font-bold md:text-7xl"
+            className="text-center text-5xl font-bold md:text-7xl font-poppins"
             transition={{ delay: 0.5 }}
             initial={{ opacity: 0, y: -100 }}
             animate={{ y: 0 }}
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
             dolor sit amet cectur.
           </motion.h1>
           <motion.p
-            className="m-5 text-center text-sm"
+            className="m-5 text-center text-sm font-poppins"
             transition={{ delay: 0.6 }}
             initial={{ opacity: 0, y: -100 }}
             animate={{ y: 0 }}
@@ -93,7 +93,7 @@ const Home: NextPage = () => {
               placeholder="Lorem ipsum dolor sit amet"
             />
             <button className="w-36 rounded-full bg-blue-700 text-white">
-              <p className="p-4">Subscribe</p>
+              <p className="p-4 font-poppins">Subscribe</p>
             </button>
           </motion.div>
         </div>
@@ -107,7 +107,7 @@ const Home: NextPage = () => {
         >
           <div className="md:w-1/2">
             <div className="mx-4 md:mx-20">
-              <h1 className="mx-10 mb-4 text-center text-2xl font-bold md:mx-0 md:mb-0 md:ml-20 md:mt-9 md:text-start md:text-4xl">
+              <h1 className="mx-10 mb-4 text-center text-2xl font-bold md:mx-0 md:mb-0 md:ml-20 md:mt-9 font-poppins md:text-start md:text-4xl">
                 Lorem ipsum dolor sit amet consectetur. <br />
                 Consequat porta.
               </h1>
@@ -115,7 +115,7 @@ const Home: NextPage = () => {
           </div>
           <div className="md:w-1/2">
             <div className="mx-20">
-              <p className="text-center text-2xl font-bold text-blue-800 md:text-start">
+              <p className="text-center font-poppins text-2xl font-bold text-blue-800 md:text-start">
                 Sposor
               </p>
               <div className="flex flex-row justify-center md:justify-normal">
@@ -181,7 +181,7 @@ const Home: NextPage = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <p className="visible py-4 text-center text-2xl font-bold md:invisible">
+          <p className="visible py-4 text-center font-poppins text-2xl font-bold md:invisible">
             Category
           </p>
           <div className="flex flex-row justify-center">
@@ -256,14 +256,14 @@ const Home: NextPage = () => {
                 />
                 <div className="mx-6 md:mx-0">
                   <div className="flex flex-row items-center justify-center md:justify-normal">
-                    <h1 className="px-2 text-slate-500">{item.topicsName}</h1>
+                    <h1 className="px-2 font-poppins text-slate-500">{item.topicsName}</h1>
                     <button
                       className="h-2 w-2 rounded-full bg-blue-400"
                       disabled
                     ></button>
-                    <h1 className="px-2 text-slate-500">{item.date.getMonth()} {" "}{item.date.getFullYear()}</h1>
+                    <h1 className="px-2 font-poppins text-slate-500">{item.date.getMonth()} {" "}{item.date.getFullYear()}</h1>
                   </div>
-                  <h1 className="mx-4 px-2 text-center text-xl font-bold md:mx-0 md:text-left">
+                  <h1 className="mx-4 font-poppins px-2 text-center text-xl font-bold md:mx-0 md:text-left">
                     {item.title}
                   </h1>
                 </div>

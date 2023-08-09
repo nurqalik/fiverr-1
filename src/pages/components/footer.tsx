@@ -19,18 +19,18 @@ const Footer = () => {
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="mb-3 flex flex-row md:mb-2"
+                className="mb-3 flex flex-row font-poppins md:mb-2"
               >
-                <p className="text-bold text-sm font-bold text-blue-800 md:text-2xl">
+                <p className="text-bold font-poppins text-sm font-bold text-blue-800 md:text-2xl">
                   W
                 </p>
-                <p className="text-bold  text-sm font-bold text-black md:text-2xl">
+                <p className="text-bold font-poppins text-sm font-bold text-black md:text-2xl">
                   eb
                 </p>
-                <p className="text-bold text-sm font-bold text-blue-800 md:text-2xl">
+                <p className="text-bold font-poppins text-sm font-bold text-blue-800 md:text-2xl">
                   S
                 </p>
-                <p className="text-bold  text-sm font-bold text-black md:text-2xl">
+                <p className="text-bold font-poppins text-sm font-bold text-black md:text-2xl">
                   ite
                 </p>
               </motion.h1>
@@ -39,7 +39,7 @@ const Footer = () => {
                 initial={{ opacity: 1, y: 100 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="text-xs text-slate-600 md:text-base"
+                className="text-xs font-poppins text-slate-600 md:text-base"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -53,7 +53,7 @@ const Footer = () => {
                 initial={{ opacity: 1, y: 100 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="mb-3 text-sm font-semibold text-slate-700 md:mb-5 md:text-base"
+                className="mb-3 text-sm font-poppins font-semibold text-slate-700 md:mb-5 md:text-base"
               >
                 About Us
               </motion.h1>
@@ -63,11 +63,11 @@ const Footer = () => {
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
               >
-                <li className="text-xs text-slate-600">Our Team</li>
-                <li className="text-xs text-slate-600">Pitch a Story</li>
-                <li className="text-xs text-slate-600">Our Resources</li>
-                <li className="text-xs text-slate-600">Privacy</li>
-                <li className="text-xs text-slate-600">Polygraph Sutid</li>
+                <li className="text-xs font-poppins text-slate-600">Our Team</li>
+                <li className="text-xs font-poppins text-slate-600">Pitch a Story</li>
+                <li className="text-xs font-poppins text-slate-600">Our Resources</li>
+                <li className="text-xs font-poppins text-slate-600">Privacy</li>
+                <li className="text-xs font-poppins text-slate-600">Polygraph Sutid</li>
               </motion.ul>
             </div>
             <div className="mx-4 mt-10 w-[30%] text-left md:mt-20 md:w-[15%]">
@@ -76,7 +76,7 @@ const Footer = () => {
                 initial={{ opacity: 1, y: 100 }}
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
-                className="mb-3 text-sm font-semibold text-slate-700 md:mb-5 md:text-base"
+                className="mb-3 text-sm font-poppins font-semibold text-slate-700 md:mb-5 md:text-base"
               >
                 Follow Us
               </motion.h1>
@@ -86,18 +86,18 @@ const Footer = () => {
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
               >
-                <li className="text-xs text-slate-600">Twitter</li>
-                <li className="text-xs text-slate-600">Instagram</li>
-                <li className="text-xs text-slate-600">Facebook</li>
-                <li className="text-xs text-slate-600">Youtube</li>
-                <li className="text-xs text-slate-600">Tiktok</li>
-                <li className="text-xs text-slate-600">Mastodon</li>
-                <li className="text-xs text-slate-600">RSS</li>
+                <li className="text-xs font-poppins text-slate-600">Twitter</li>
+                <li className="text-xs font-poppins text-slate-600">Instagram</li>
+                <li className="text-xs font-poppins text-slate-600">Facebook</li>
+                <li className="text-xs font-poppins text-slate-600">Youtube</li>
+                <li className="text-xs font-poppins text-slate-600">Tiktok</li>
+                <li className="text-xs font-poppins text-slate-600">Mastodon</li>
+                <li className="text-xs font-poppins text-slate-600">RSS</li>
               </motion.ul>
             </div>
           </div>
           <div className="mt-4 w-full bg-slate-200 md:mt-14">
-            <p className="text-center text-sm md:text-base">
+            <p className="text-center font-poppins text-sm md:text-base">
               SiteName &copy;2023. All rights reserved
             </p>
           </div>

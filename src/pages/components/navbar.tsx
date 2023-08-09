@@ -61,7 +61,7 @@ const Navbar = () => {
                 animate={{ y: 0, color: "#2c5282" }}
                 whileInView={{ color: "#2c5282" }}
                 viewport={{ once: true }}
-                className="text-black"
+                className="text-black font-poppins"
               >
                 W
               </motion.p>
@@ -71,7 +71,7 @@ const Navbar = () => {
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-black"
+                className="text-black font-poppins"
               >
                 eb
               </motion.p>
@@ -81,7 +81,7 @@ const Navbar = () => {
                 animate={{ y: 0, color: "#2c5282" }}
                 whileInView={{ color: "#2c5282" }}
                 viewport={{ once: true }}
-                className="text-black"
+                className="text-black font-poppins"
               >
                 S
               </motion.p>
@@ -91,7 +91,7 @@ const Navbar = () => {
                 animate={{ y: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-black"
+                className="text-black font-poppins"
               >
                 ite
               </motion.p>
@@ -146,13 +146,13 @@ const Navbar = () => {
                   <li className="origin-[-20px 50%] block list-none">
                     <input
                       type="text"
-                      className="border-1 mx-4 h-10 w-32 rounded-full border border-slate-400 p-4 text-center text-black"
+                      className="border-1 mx-4 h-10 w-32 font-poppins rounded-full border border-slate-400 p-4 text-center text-black"
                       placeholder="Search"
                     />
                   </li>
                   <li className="origin-[-20px 50%] block list-none text-center">
                     <Link
-                      className="p-2 text-slate-800 hover:text-black"
+                      className="p-2 text-slate-800 font-poppins hover:text-black"
                       href={"/topics"}
                     >
                       Topics
@@ -160,7 +160,7 @@ const Navbar = () => {
                   </li>
                   <li className="origin-[-20px 50%] block list-none text-center">
                     <Link
-                      className="p-2 text-slate-800 hover:text-black"
+                      className="p-2 text-slate-800 font-poppins hover:text-black"
                       href={"/advertise"}
                     >
                       Advertise
@@ -168,7 +168,7 @@ const Navbar = () => {
                   </li>
                   <li className="origin-[-20px 50%] block list-none text-center">
                     <Link
-                      className="p-2 text-slate-800 hover:text-black"
+                      className="p-2 text-slate-800 font-poppins hover:text-black"
                       href={"/books"}
                     >
                       Books
@@ -176,7 +176,7 @@ const Navbar = () => {
                   </li>
                   <li className="origin-[-20px 50%] block list-none text-center">
                     <Link
-                      className="p-2 text-slate-800 hover:text-black"
+                      className="p-2 text-slate-800 font-poppins hover:text-black"
                       href={"/about"}
                     >
                       About Us
@@ -195,29 +195,29 @@ const Navbar = () => {
             >
               <input
                 type="text"
-                className="border-1 mx-4 rounded-full border border-slate-400 p-4 text-black"
+                className="border-1 mx-4 rounded-full font-poppins border border-slate-400 p-4 text-black"
                 placeholder="Search"
               />
               <Link
-                className="p-2 text-slate-800 hover:text-black"
+                className="p-2 text-slate-800 font-poppins hover:text-black"
                 href={"/topics"}
               >
                 Topics
               </Link>
               <Link
-                className="p-2 text-slate-800 hover:text-black"
+                className="p-2 text-slate-800 font-poppins hover:text-black"
                 href={"/advertise"}
               >
                 Advertise
               </Link>
               <Link
-                className="p-2 text-slate-800 hover:text-black"
+                className="p-2 text-slate-800 font-poppins hover:text-black"
                 href={"/books"}
               >
                 Books
               </Link>
               <Link
-                className="p-2 text-slate-800 hover:text-black"
+                className="p-2 text-slate-800 font-poppins hover:text-black"
                 href={"/about"}
               >
                 About Us

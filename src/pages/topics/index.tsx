@@ -31,7 +31,7 @@ const Topics: NextPage = () => {
       <div className="mx-auto items-center bg-slate-200">
         <div className="container mx-auto flex flex-col justify-center md:mb-40">
           <motion.h1
-            className="my-4 mt-20 bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-center text-4xl font-bold text-transparent md:mt-40 md:text-6xl"
+            className="my-4 mt-20 bg-gradient-to-r font-poppins from-blue-400 to-blue-800 bg-clip-text text-center text-4xl font-bold text-transparent md:mt-40 md:text-6xl"
             initial={{ opacity: 0, y: -100 }}
             animate={{ y: 0 }}
             transition={{ delay: 0.5 }}
@@ -41,7 +41,7 @@ const Topics: NextPage = () => {
             Technology
           </motion.h1>
           <motion.p
-            className="font-base md:text-normal mb-10 px-10 text-center text-sm text-slate-600 md:mb-0 md:px-44"
+            className="font-base md:text-normal font-poppins mb-10 px-10 text-center text-sm text-slate-600 md:mb-0 md:px-44"
             initial={{ opacity: 0, y: -100 }}
             animate={{ y: 0 }}
             transition={{ delay: 0.7 }}
@@ -74,10 +74,10 @@ const Topics: NextPage = () => {
               className="h-52 w-72 object-cover justify-center rounded-xl md:mx-6 md:my-0 md:h-60 md:w-96 md:rounded-none"
             />
             <Link href={`/topics/${item.id}`} className="my-4 flex max-w-sm flex-col">
-              <h1 className="px-16 pb-2 text-center text-xl font-bold md:px-2 md:text-left ">
+              <h1 className="px-16 pb-2 text-center text-xl font-poppins font-bold md:px-2 md:text-left ">
                 {item.title}
               </h1>
-              <p className="px-16 text-center text-slate-400 md:px-2 md:text-left">
+              <p className="px-16 text-center text-slate-400 font-poppins md:px-2 md:text-left">
                 {item.date.toString()}
               </p>
             </Link>

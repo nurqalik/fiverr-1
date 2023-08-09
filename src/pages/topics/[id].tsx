@@ -34,7 +34,7 @@ const TopicPage: NextPage = () => {
         <div className="container mx-auto mt-20 items-center" key={selectedTopic?.id}>
           <div className="flex flex-col items-center justify-center">
             <motion.div
-              className="text-base font-semibold text-slate-700"
+              className="text-base font-semibold font-poppins text-slate-700"
               initial={{ opacity: 1, y: -100 }}
               animate={{ y: 0 }}
               transition={{ delay: 0.5 }}
@@ -44,7 +44,7 @@ const TopicPage: NextPage = () => {
               {selectedTopic?.topicsName}
             </motion.div>
             <motion.div
-              className="mb-2 max-w-xs text-center text-xl font-bold md:max-w-4xl md:text-4xl"
+              className="mb-2 max-w-xs text-center font-poppins text-xl font-bold md:max-w-4xl md:text-4xl"
               initial={{ opacity: 1, y: -100 }}
               animate={{ y: 0 }}
               transition={{ delay: 0.5 }}
@@ -69,8 +69,8 @@ const TopicPage: NextPage = () => {
                 />
               </div>
               <div className="mx-4 flex flex-col">
-                <div className="text-xs">Author Name</div>
-                <Link href="/" className="text-xs text-blue-500">
+                <div className="text-xs font-poppins">Author Name</div>
+                <Link href="/" className="text-xs font-poppins text-blue-500">
                   @Twitter
                 </Link>
               </div>
@@ -78,10 +78,10 @@ const TopicPage: NextPage = () => {
           </div>
           <div className="container mx-auto">
             <div className="mx-16 mt-5 flex flex-col md:mx-80">
-              <h1 className="text-center text-base font-semibold md:text-left md:text-xl">
+              <h1 className="text-center text-base font-poppins font-semibold md:text-left md:text-xl">
                 {selectedTopic?.title}
               </h1>
-              <p className="my-2 text-sm md:my-4 md:text-base">
+              <p className="my-2 text-sm md:my-4 font-poppins md:text-base">
                 {selectedTopic?.description}
               </p>
               <Image
@@ -92,7 +92,7 @@ const TopicPage: NextPage = () => {
                 className="w-full rounded-lg object-fill"
                 alt=""
               />
-              <p className="my-2 text-sm md:my-4 md:text-base">
+              <p className="my-2 text-sm md:my-4 font-poppins md:text-base">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae ab illo inventore veritatis et quasi architecto beatae
@@ -113,13 +113,13 @@ const TopicPage: NextPage = () => {
               <div className="flex flex-col">
                 <div className="mb-2 mt-8 flex flex-row items-center md:mx-16">
                   <button className="h-6 w-6 rounded-full bg-blue-600" disabled>
-                    <p className="text-base font-semibold text-white">i</p>
+                    <p className="text-base font-semibold font-poppins text-white">i</p>
                   </button>
-                  <div className="mx-2 text-base font-bold md:text-xl">
+                  <div className="mx-2 text-base font-poppins font-bold md:text-xl">
                     Lorem ipsul dolor:
                   </div>
                 </div>
-                <p className="mb-8 text-sm md:mx-16 md:text-base">
+                <p className="mb-8 text-sm font-poppins md:mx-16 md:text-base">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -134,7 +134,7 @@ const TopicPage: NextPage = () => {
           </div>
           <div className="container mx-auto">
             <div className="mx-16 mt-5 md:mx-80">
-              <p className="text-sm md:text-base">
+              <p className="text-sm font-poppins md:text-base">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae ab illo inventore veritatis et quasi architecto beatae
@@ -152,10 +152,10 @@ const TopicPage: NextPage = () => {
           </div>
           <div className="container mx-auto mb-40">
             <div className="mx-16 flex flex-col md:mx-80">
-              <div className="my-4 text-xl font-bold md:text-4xl">
+              <div className="my-4 text-xl font-poppins font-bold md:text-4xl">
                 Content Title 2
               </div>
-              <div className="mb-4 text-sm md:text-base">
+              <div className="mb-4 text-sm font-poppins md:text-base">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae ab illo inventore veritatis et quasi architecto beatae
@@ -171,18 +171,18 @@ const TopicPage: NextPage = () => {
               </div>
               <div className="flex flex-row justify-between">
                 <div className="flex flex-col">
-                  <div className="text-base font-bold text-blue-400 md:text-xl">
+                  <div className="text-base font-bold font-poppins text-blue-400 md:text-xl">
                     DATE:
                   </div>
-                  <p className="text-xs font-semibold md:text-base">
+                  <p className="text-xs font-semibold font-poppins md:text-base">
                     {selectedTopic?.date.toString()}
                   </p>
                 </div>
                 <div className="flex flex-col">
-                  <div className="text-base font-bold text-blue-400 md:text-xl">
+                  <div className="text-base font-bold font-poppins text-blue-400 md:text-xl">
                     SHARE:
                   </div>
-                  <p className="text-xs font-semibold md:text-base">
+                  <p className="text-xs font-semibold font-poppins md:text-base">
                     copy the link
                   </p>
                 </div>
