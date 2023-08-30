@@ -30,8 +30,8 @@ const Topics: NextPage = () => {
     <>
       <div className="mx-auto items-center bg-slate-200">
         <div className="container mx-auto flex flex-col justify-center md:mb-40">
-          <motion.h1
-            className="my-8 mt-20 bg-gradient-to-r font-poppins from-blue-400 to-blue-800 bg-clip-text text-center text-4xl font-bold text-transparent md:mt-40 md:text-6xl"
+          <motion.div
+            className="mt-20 bg-gradient-to-r font-poppins from-blue-400 to-blue-800 h-24 bg-clip-text text-center text-4xl font-bold text-transparent md:mt-40 md:text-6xl"
             initial={{ opacity: 0, y: -100 }}
             animate={{ y: 0 }}
             transition={{ delay: 0.5 }}
@@ -39,7 +39,7 @@ const Topics: NextPage = () => {
             viewport={{ once: true }}
           >
             Technology
-          </motion.h1>
+          </motion.div>
           <motion.p
             className="font-base md:text-normal font-poppins mb-10 px-10 text-center text-sm text-slate-600 md:mb-0 md:px-44"
             initial={{ opacity: 0, y: -100 }}
