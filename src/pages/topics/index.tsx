@@ -31,7 +31,7 @@ const Topics: NextPage = () => {
       <div className="mx-auto items-center bg-slate-200">
         <div className="container mx-auto flex flex-col justify-center md:mb-40">
           <motion.h1
-            className="my-4 mt-20 bg-gradient-to-r font-poppins from-blue-400 to-blue-800 bg-clip-text text-center text-4xl font-bold text-transparent md:mt-40 md:text-6xl"
+            className="my-8 mt-20 bg-gradient-to-r font-poppins from-blue-400 to-blue-800 bg-clip-text text-center text-4xl font-bold text-transparent md:mt-40 md:text-6xl"
             initial={{ opacity: 0, y: -100 }}
             animate={{ y: 0 }}
             transition={{ delay: 0.5 }}
