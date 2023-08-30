@@ -195,7 +195,7 @@ const Navbar = () => {
             >
               <input
                 type="text"
-                className="border-1 mx-4 rounded-full font-poppins border border-slate-400 p-4 text-black"
+                className="border-1 rounded-full font-poppins border border-slate-400 p-3 placeholder:pl-2 w-60 mx-2 text-black"
                 placeholder="Search"
               />
               <Link
